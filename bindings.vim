@@ -84,17 +84,17 @@ nnoremap <silent> <leader>- :Tex<cr>
 nnoremap <silent> <leader>f :Unite file_rec/neovim<cr>
 
 " fugitive
-nnoremap <leader>gw :Gwrite<cr>
-nnoremap <leader>gr :Gread<cr>
-nnoremap <leader>gd :Gremove<cr>
-nnoremap <leader>gm :Gmove<cr>
+nnoremap <leader>gg :Gwrite<cr>
+nnoremap <leader>gu :Gread<cr>
+nnoremap <leader>gr :Gremove<cr>
+nnoremap <leader>gm :Gmove<space>
 
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
 
 " gitgutter
-nnoremap <leader>ghn <plug>GitGutterNextHunk
-nnoremap <leader>ghp <plug>GitGutterPrevHunk
-nnoremap <leader>ghv <plug>GitGutterPreviewHunk
-nnoremap <leader>ghs <plug>GitGutterStageHunk
-nnoremap <leader>ghu <plug>GitGutterUndoHunk
+nnoremap <leader>gdn <plug>GitGutterNextHunk
+nnoremap <leader>gdp <plug>GitGutterPrevHunk
+nnoremap <leader>gdv <plug>GitGutterPreviewHunk
+nnoremap <leader>gds <plug>GitGutterStageHunk
+nnoremap <leader>gdu <plug>GitGutterUndoHunk

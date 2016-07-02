@@ -10,18 +10,18 @@ Key bindings
 
 ### vim-fugitive
 
-  * `<leader>gw`: save buffer and stage current file
-  * `<leader>gr`: revert current file to last checked in version
-  * `<leader>gd`: delete current file
+  * `<leader>gg`: save buffer and stage current file
+  * `<leader>gu`: revert current file to last checked in version
+  * `<leader>gr`: remove current file
   * `<leader>gm`: rename current file
 
 ### vim-gitgutter
 
-  * `<leader>ghn`: next hunk
-  * `<leader>ghp`: previous hunk
-  * `<leader>ghv`: preview changes
-  * `<leader>ghs`: stage hunk
-  * `<leader>ghu`: undo stage hunk
+  * `<leader>gdn`: next hunk
+  * `<leader>gdp`: previous hunk
+  * `<leader>gdv`: preview changes
+  * `<leader>gds`: stage hunk
+  * `<leader>gdu`: undo stage hunk
 
 References
 ----------
