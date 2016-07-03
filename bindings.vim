@@ -17,7 +17,7 @@ nnoremap <silent> - :Explore<cr>
 tnoremap <esc> <c-\><c-n>
 
 " exit term and close its window 
-tnoremap <silent> <c-d> <c-d><c-\><c-n>:q<cr>
+tnoremap <silent> <c-d> <c-\><c-n>:Tclose<cr>
 
 " tab completion
 inoremap <expr><tab> pumvisible() ? '\<c-n>' : '\<tab>'
@@ -72,13 +72,13 @@ nnoremap <silent> <leader>r :source $MYVIMRC<cr>
 " update plugins
 nnoremap <silent> <leader>u :call nvide#update()<cr>
 
-" term
-nnoremap <silent> <leader>t :below 10sp term://$SHELL<cr>i
-
 " netrw
 nnoremap <silent> <leader>h :Vex<cr>
 nnoremap <silent> <leader>l :Vex!<cr>
 nnoremap <silent> <leader>- :Tex<cr>
+
+" neoterm
+nnoremap <silent> <leader>t :Topen \| call g:neoterm.last().focus() \| startinsert<cr>
 
 " unite
 nnoremap <silent> <leader>f :Unite file_rec/neovim<cr>
