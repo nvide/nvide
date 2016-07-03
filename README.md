@@ -1,7 +1,7 @@
 nvide
 =====
 
-[neovim](neovim.io)-based IDE for frontend development
+[neovim](https://neovim.io)-based IDE for frontend development
 
 Key bindings
 ------------
@@ -17,8 +17,8 @@ Key bindings
 
 ### vim-gitgutter
 
-  * `<leader>gdn`: next hunk
-  * `<leader>gdp`: previous hunk
+  * `<leader>gdn`: go to next hunk
+  * `<leader>gdp`: go to previous hunk
   * `<leader>gdv`: preview changes
   * `<leader>gds`: stage hunk
   * `<leader>gdu`: undo stage hunk

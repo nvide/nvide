@@ -41,6 +41,7 @@ set clipboard=unnamedplus " use X clipboard
 set hidden                " unsaved buffers can be hidden
 set title                 " change the terminal's titleo
 set showcmd               " show typed keys
+set updatetime=500        " buffer update in miliseconds
 
 " indentation
 set tabstop=2

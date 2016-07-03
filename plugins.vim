@@ -16,6 +16,11 @@ let g:plug_window = '' " show progress in current window
 " helpers
 " -------
 
+Plug 'kassio/neoterm' " terminal enhacements
+let g:neoterm_size = 10
+let g:neoterm_automap_keys = "\<leader>tt"
+let g:neoterm_autoinsert = 1
+ 
 Plug 'Shougo/unite.vim' " fuzzy finder
 
 if executable('ag')
