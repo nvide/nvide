@@ -1,15 +1,30 @@
+" -------------------------
+" nvide#checkDependencies()
+" -------------------------
+
 function! nvide#checkDependencies()
+
+  " vim-plug
   if empty(glob('~/.config/nvim/autoload/plug.vim'))
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   endif
+
 endfunction
+
+" --------------
+" nvide#update()
+" --------------
 
 function! nvide#update()
   PlugUpdate
   PlugUpgrade
   UpdateRemotePlugins
 endfunction
+
+" -------------------
+" nvide#closeWindow()
+" -------------------
 
 function! s:IsPreviewWindowOpened()
   for nr in range(1, winnr('$'))

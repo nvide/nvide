@@ -15,6 +15,7 @@ source ~/.config/nvim/plugins.vim
 call plug#end()
 
 silent! colorscheme jellybeans " load theme
+call unite#custom#source('file_rec/neovim', 'max_candidates', 100)
 
 " -----------------
 " load key bindings

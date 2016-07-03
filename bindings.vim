@@ -19,13 +19,16 @@ tnoremap <esc> <c-\><c-n>
 " exit term and close its window 
 tnoremap <silent> <c-d> <c-\><c-n>:Tclose<cr>
 
-" tab completion
-inoremap <expr><tab> pumvisible() ? '\<c-n>' : '\<tab>'
-inoremap <expr><s-tab> pumvisible() ? '\<c-p>' : '\<s-tab>'
+" tab completion (double quotes are mandatory)
+inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " --------------
 " [alt] mappings
 " --------------
+
+" a faster way to save and stage files
+nnoremap <a-s> :Gwrite<cr>
+inoremap <a-s> <esc>:Gwrite<cr>i
 
 " move between windows
 nnoremap <a-h> <c-w>h
@@ -33,10 +36,10 @@ nnoremap <a-j> <c-w>j
 nnoremap <a-k> <c-w>k
 nnoremap <a-l> <c-w>l
 
-inoremap <a-h> <c-w>h
-inoremap <a-j> <c-w>j
-inoremap <a-k> <c-w>k
-inoremap <a-l> <c-w>l
+inoremap <a-h> <esc><c-w>h
+inoremap <a-j> <esc><c-w>j
+inoremap <a-k> <esc><c-w>k
+inoremap <a-l> <esc><c-w>l
 
 tnoremap <a-h> <c-\><c-n><c-w>h
 tnoremap <a-j> <c-\><c-n><c-w>j
@@ -46,25 +49,49 @@ tnoremap <a-l> <c-\><c-n><c-w>l
 " close windows
 nnoremap <silent> <a-x> :call nvide#closeWindow()<cr>
 inoremap <silent> <a-x> <esc>:call nvide#closeWindow()<cr>
+tnoremap <silent> <a-x> <c-\><c-n>:call nvide#closeWindow()<cr>
+
+" move between tabs
+nnoremap <silent> <a-tab> :tabnext<cr>
+inoremap <silent> <a-tab> <esc>:tabnext<cr>
+tnoremap <silent> <a-tab> <c-\><c-n>:tabnext<cr>
+
+nnoremap <a-1> 1gt
+nnoremap <a-2> 2gt
+nnoremap <a-3> 3gt
+nnoremap <a-4> 4gt
+nnoremap <a-5> 5gt
+nnoremap <a-6> 6gt
+nnoremap <a-7> 7gt
+nnoremap <a-8> 8gt
+nnoremap <a-9> 9gt
+nnoremap <a-0> 10gt
+
+inoremap <a-1> <esc>1gt
+inoremap <a-2> <esc>2gt
+inoremap <a-3> <esc>3gt
+inoremap <a-4> <esc>4gt
+inoremap <a-5> <esc>5gt
+inoremap <a-6> <esc>6gt
+inoremap <a-7> <esc>7gt
+inoremap <a-8> <esc>8gt
+inoremap <a-9> <esc>9gt
+inoremap <a-0> <esc>10gt
+
+tnoremap <a-1> <c-\><c-n>1gt
+tnoremap <a-2> <c-\><c-n>2gt
+tnoremap <a-3> <c-\><c-n>3gt
+tnoremap <a-4> <c-\><c-n>4gt
+tnoremap <a-5> <c-\><c-n>5gt
+tnoremap <a-6> <c-\><c-n>6gt
+tnoremap <a-7> <c-\><c-n>7gt
+tnoremap <a-8> <c-\><c-n>8gt
+tnoremap <a-9> <c-\><c-n>9gt
+tnoremap <a-0> <c-\><c-n>10gt
 
 " -----------------
 " <leader> mappings
 " -----------------
-
-" move between tabs
-nnoremap <silent> <leader><tab> :tabnext<cr>
-nnoremap <silent> <leader><s-tab> :tabprevious<cr>
-
-nnoremap <leader>1 1gt
-nnoremap <leader>2 2gt
-nnoremap <leader>3 3gt
-nnoremap <leader>4 4gt
-nnoremap <leader>5 5gt
-nnoremap <leader>6 6gt
-nnoremap <leader>7 7gt
-nnoremap <leader>8 8gt
-nnoremap <leader>9 9gt
-nnoremap <leader>0 10gt
 
 " reload configuration
 nnoremap <silent> <leader>r :source $MYVIMRC<cr>
@@ -81,10 +108,10 @@ nnoremap <silent> <leader>- :Tex<cr>
 nnoremap <silent> <leader>t :Topen \| call g:neoterm.last().focus() \| startinsert<cr>
 
 " unite
-nnoremap <silent> <leader>f :Unite file_rec/neovim<cr>
+nnoremap <silent> <leader>f :Unite -no-split file_rec/neovim<cr>
 
 " fugitive
-nnoremap <leader>gg :Gwrite<cr>
+nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gu :Gread<cr>
 nnoremap <leader>gr :Gremove<cr>
 nnoremap <leader>gm :Gmove<space>

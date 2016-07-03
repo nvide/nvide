@@ -24,7 +24,7 @@ let g:neoterm_autoinsert = 1
 Plug 'Shougo/unite.vim' " fuzzy finder
 
 if executable('ag')
-  let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
+  let g:unite_source_rec_async_command = 'ag --nocolor --follow --hidden -g ""'
 endif
 
 " git support
