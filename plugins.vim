@@ -10,14 +10,14 @@ let g:netrw_hide = 1               " enable file ignore patterns
 let g:netrw_list_hide = '.*\.swp$' " file ignore patterns
 
 " vim-plug
-let g:plug_window = '' " show progress in current window
+let g:plug_window = 'enew' " show progress in current window
 
 " -------
 " helpers
 " -------
 
-Plug 'kassio/neoterm' " terminal enhacements
-let g:neoterm_size = 10
+Plug 'pfraces/neoterm' " terminal enhacements
+let g:neoterm_window = '10new'
 let g:neoterm_automap_keys = "\<leader>tt"
 let g:neoterm_autoinsert = 1
  
