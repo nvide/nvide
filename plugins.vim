@@ -16,7 +16,7 @@ let g:plug_window = 'enew' " show progress in current window
 " helpers
 " -------
 
-Plug 'pfraces/neoterm' " terminal enhacements
+Plug 'nvide/term' " terminal enhacements
 let g:neoterm_window = '10new'
 let g:neoterm_automap_keys = "\<leader>tt"
 let g:neoterm_autoinsert = 1
