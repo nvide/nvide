@@ -105,7 +105,8 @@ nnoremap <silent> <leader>l :Vex!<cr>
 nnoremap <silent> <leader>- :Tex<cr>
 
 " neoterm
-nnoremap <silent> <leader>t :Topen \| call g:neoterm.last().focus() \| startinsert<cr>
+nnoremap <silent> <leader>j :Topen \| call g:neoterm.last().focus() \| startinsert<cr>
+nnoremap <silent> <leader>k :call nvide#openTermTab()<cr>
 
 " unite
 nnoremap <silent> <leader>f :Unite -no-split file_rec/neovim<cr>

@@ -39,3 +39,14 @@ function! nvide#closeWindow()
   else | close
   endif
 endfunction
+
+" -------------------
+" nvide#openTermTab()
+" -------------------
+"
+function! nvide#openTermTab()
+  let l:neoterm_window = g:neoterm_window
+  let g:neoterm_window = 'tabnew'
+  Tnew
+  let g:neoterm_window = l:neoterm_window
+endfunction
