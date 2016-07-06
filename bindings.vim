@@ -1,5 +1,5 @@
 " use Q to execute default register (shadows ex mode)
-nnoremap Q @q 
+nnoremap Q @q
 
 " tab indentation
 vnoremap <tab> >gv
@@ -16,11 +16,12 @@ nnoremap <silent> - :Explore<cr>
 " enter NORMAL mode in term
 tnoremap <esc> <c-\><c-n>
 
-" exit term and close its window 
+" exit term and close its window
 tnoremap <silent> <c-d> <c-\><c-n>:Tclose<cr>
 
 " tab completion (double quotes are mandatory)
 inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
 " --------------
 " [alt] mappings
