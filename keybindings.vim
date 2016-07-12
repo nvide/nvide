@@ -19,7 +19,7 @@ tnoremap <esc> <c-\><c-n>
 " exit term and close its window
 tnoremap <silent> <c-d> <c-\><c-n>:Tclose<cr>
 
-" tab completion (double quotes are mandatory)
+" tab completion (double quotes are mandatory with <expr>)
 inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
@@ -105,12 +105,16 @@ nnoremap <silent> <leader>h :Vex<cr>
 nnoremap <silent> <leader>l :Vex!<cr>
 nnoremap <silent> <leader>- :Tex<cr>
 
+" bbye
+nnoremap <silent> <leader>x :Bdelete<cr>
+
 " neoterm
 nnoremap <silent> <leader>j :Topen \| call g:neoterm.last().focus() \| startinsert<cr>
 nnoremap <silent> <leader>k :call nvide#openTermTab()<cr>
 
 " unite
-nnoremap <silent> <leader>f :Unite -no-split file_rec/neovim<cr>
+nnoremap <silent> <leader>f :Unite file_rec/neovim<cr>
+nnoremap <silent> <leader>b :Unite buffer<cr>
 
 " fugitive
 nnoremap <leader>gw :Gwrite<cr>
@@ -127,3 +131,13 @@ nnoremap <leader>gdp <plug>GitGutterPrevHunk
 nnoremap <leader>gdv <plug>GitGutterPreviewHunk
 nnoremap <leader>gds <plug>GitGutterStageHunk
 nnoremap <leader>gdu <plug>GitGutterUndoHunk
+
+" ---------------
+" :Unite mappings
+" ---------------
+
+function! keybindings#unite()
+  " <tab> completion
+  imap <buffer> <tab> <plug>(unite_select_next_line)
+  imap <buffer> <s-tab> <plug>(unite_select_previous_line)
+endfunction

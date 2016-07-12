@@ -13,3 +13,8 @@ augroup restore_position
     \ endif
 
 augroup END
+
+augroup unite
+  autocmd!
+  autocmd FileType unite call keybindings#unite()
+augroup END
