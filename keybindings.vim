@@ -117,13 +117,13 @@ nnoremap <silent> <leader>f :Unite file_rec/neovim<cr>
 nnoremap <silent> <leader>b :Unite buffer<cr>
 
 " fugitive
-nnoremap <leader>gw :Gwrite<cr>
-nnoremap <leader>gu :Gread<cr>
-nnoremap <leader>gr :Gremove<cr>
-nnoremap <leader>gm :Gmove<space>
+nnoremap <silent> <leader>gw :Gwrite<cr>
+nnoremap <silent> <leader>gu :Gread<cr>
+nnoremap <silent> <leader>gr :Gremove<cr>
+nnoremap <silent> <leader>gm :Gmove<space>
 
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>gc :Gcommit<cr>
+nnoremap <silent> <leader>gs :Gstatus<cr>
+nnoremap <silent> <leader>gc :Gcommit<cr>
 
 " gitgutter
 nnoremap <leader>gdn <plug>GitGutterNextHunk
